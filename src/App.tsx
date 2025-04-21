@@ -3,6 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+  function descendingOrder(n: number){
+    //...
+    return Number(String(n).split("").sort((a, b) => b - a).join(""))
+  }
+  console.log(descendingOrder(51))
+
 function App() {
   const [count, setCount] = useState(0)
 
