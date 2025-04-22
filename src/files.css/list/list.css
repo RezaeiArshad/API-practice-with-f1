@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    
+}
+
+@media (min-width: 768px) {
+    #list {
+        width: 50%;
+        height: 80vh;
+        border: 1px solid var(--forground-color);
+        border-radius: 10px;
+        margin-top: 10vh;
+        margin-left: 10%;
+    }
+}

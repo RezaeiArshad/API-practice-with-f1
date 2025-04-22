@@ -1,0 +1,26 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --background-color: black;
+  --color: white;
+  --forground-color: gray;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+html {
+  padding: none;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
