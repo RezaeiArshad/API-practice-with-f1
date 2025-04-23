@@ -1,6 +1,6 @@
 const fetchData = async (whatToGet: string): Promise<object | null> => {
     try {
-      const res = await fetch(`/api/${whatToGet}`)
+      const res = await fetch(`https://f1-proxy.mehdirezaeiarshad.workers.dev`)
       if (!res.ok) {
         throw new Error (`HTTP error ! status: ${res.status}`);
       }
