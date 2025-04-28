@@ -10,5 +10,22 @@
         border-radius: 10px;
         margin-top: 10vh;
         margin-left: 10%;
+        display: grid;
+        gap: 10px;
+    }
+
+    .driver {
+        display: flex;
+        align-items: center;
+    }
+
+    .driver-team {
+        margin-left: 50px;
+    }
+
+    .driver-color {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
     }
 }
