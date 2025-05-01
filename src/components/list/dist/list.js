@@ -46,14 +46,14 @@ function List() {
     var _a = react_1.useState(null), drivers = _a[0], setDrivers = _a[1];
     react_1.useEffect(function () {
         var loadData = function () { return __awaiter(_this, void 0, void 0, function () {
-            var data;
+            var driverData;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, fetch_1["default"]("drivers?session_key=latest")];
                     case 1:
-                        data = _a.sent();
-                        console.log(data);
-                        setDrivers(data);
+                        driverData = _a.sent();
+                        console.log(driverData);
+                        setDrivers(driverData);
                         return [2 /*return*/];
                 }
             });
@@ -70,3 +70,4 @@ function List() {
                 React.createElement("h6", { className: "driver-team" }, driver.team_name))); }))));
 }
 exports["default"] = List;
+face.match(/^[:;]?[-~][)D]$/);

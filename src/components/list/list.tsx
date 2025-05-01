@@ -4,11 +4,12 @@ import fetchData from "../fetch"
 import { useEffect, useState } from "react"
 
 type DriverType = {
-  driver_number: number;
-  full_name: string;
-  team_name: string;
-  team_colour: string;
+  driver_number: number,
+  full_name: string,
+  team_name: string,
+  team_colour: string,
 }
+
 
 function List() {
   const {isMobile} = useScreenSize()
@@ -16,9 +17,9 @@ function List() {
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchData("drivers?session_key=latest")
-      console.log(data)
-      setDrivers(data)
+      const driverData = await fetchData("drivers?session_key=latest")
+      console.log(driverData)
+      setDrivers(driverData)
     }
     loadData();
   }, [])
@@ -44,3 +45,33 @@ function List() {
 }
 
 export default List
+
+
+const recoverSecret = function(triplets: string[][]): string {
+  let holderHash = {}
+  triplets.map((triplet: string[]) => {
+    triplet.map((letter) => {
+      holderHash[letter] = 1
+    })
+  })
+  let holderArr = new Set(Object.keys(holderHash))
+  triplets.map((triplet) => {
+    for (let i = 2; i > 0; i--) {
+      let previous = holderArr.findeIndex((element) => element === triplet[i - 1])
+      let now = holderArr.findIndex((element) => element === triplet[i])
+      holderArr[now]
+    }
+  })
+
+  return "h"
+}
+
+console.log(recoverSecret([
+  ['t','u','p'],
+  ['w','h','i'],
+  ['t','s','u'],
+  ['a','t','s'],
+  ['h','a','p'],
+  ['t','i','s'],
+  ['w','h','s']
+]))
